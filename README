@@ -1,0 +1,61 @@
+For PostgreSQL Connection in connection.py
+
+This Python script establishes a connection to a PostgreSQL database using the psycopg2 library. It includes database credentials for a local PostgreSQL server, but you should replace them with your actual database credentials.
+
+1. Replace the placeholder values in the script with your actual database credentials:
+2. Call the postgre_sql_connection function to establish a connection to the PostgreSQL database:
+
+
+For user registarion and authentication in db_helper.
+
+1. Established the postgresql connection and write the query to check the existing user and register the new user.
+2. Written a function to authenticate the user.
+
+For Flask API with User Registration, Authentication, and Historic Weather Data
+
+Usage
+1. Create a PostgreSQL database and configure the database helper (db_helper.py) with your actual database credentials.
+2. Replace the placeholder value in the app.config['JWT_SECRET_KEY'] with your actual JWT secret key in the script.
+
+Endpoints
+1. User Registration
+URL: /user
+Method: POST
+Request Body: {
+  "username": "your_username",
+  "password": "your_password"
+}
+Response:
+    Success: HTTP status code 200 with a message.
+    Failure: HTTP status code and error message.
+
+2. User Authentication
+URL: /authentication
+Method: POST
+Request Body:{
+  "username": "existing_username",
+  "password": "existing_password"
+}
+Response:
+    Success: HTTP status code 200 with an access token.
+    Failure: HTTP status code and error message.
+
+3. Secure Endpoint
+URL: /secure/endpoint
+Method: GET
+Header: Authorization: Bearer <access_token>
+Response:
+    Success: HTTP status code 200 with the current user's identity.
+    Failure: HTTP status code and error message.
+
+4. Historic Weather Data
+URL: /historic-weather
+Method: GET
+Query Parameters:
+    latitude (float): Latitude of the location.
+    longitude (float): Longitude of the location.
+    num_days (int): Number of past days for historic weather data.
+Response:
+    Success: HTTP status code 200 with historic weather data.
+    Failure: HTTP status code and error message.
+

@@ -1,0 +1,62 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.pyd
+*.dll
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+__env__/
+.venv/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.user
+*.suo
+*.cache/
+*.project
+*.pydevproject
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.msi
+*.db
+*.db-shm
+*.db-wal
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environments
+/.env
+/.env.*
+
+# Log files
+*.log
+
+# Custom
+custom_file_or_directory/
